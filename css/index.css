@@ -1,0 +1,75 @@
+body {
+    min-width: 1024px;
+    background: #F6F7FB;
+    width: calc(100% - 30px * 2);
+    margin:0 auto;
+}
+
+.page {
+    background: pink;
+}
+
+/* 头部 */
+.header {
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .logo {
+    width: 330px;
+}
+
+.header h2 {
+    font-weight: normal;
+    font-size: 28px;
+    margin-right: 25px;
+}
+
+.header p {
+    color: #7E8993;
+    font-size: 24px;
+}
+
+.header .userInfo {
+    position: absolute;
+    right: 120px;
+    color: #7E8993;
+    cursor: pointer;
+}
+
+/* banner区域 */
+.swiper-container {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-container .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+
