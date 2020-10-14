@@ -6,37 +6,37 @@ body {
 }
 
 .page {
-    background: pink;
+    /* background: pink; */
 }
 
 /* 头部 */
-.header {
+.head {
     width: 100%;
-    height: 40px;
+    /* height: 40px; */
     background: #fff;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.header .logo {
+.head .logo {
     width: 260px;
     background: pink;
     height: 90px;
 }
 
-.header h2 {
+.head h2 {
     font-weight: normal;
     font-size: 28px;
     margin-right: 25px;
 }
 
-.header p {
+.head p {
     color: #7E8993;
     font-size: 24px;
 }
 
-.header .userInfo {
+.head .userInfo {
     position: absolute;
     right: 120px;
     color: #7E8993;
@@ -53,22 +53,6 @@ body {
 .swiper-slide {
     width: 100%;
     height: 100%;
-    /* text-align: center; */
-    /* font-size: 18px; */
-    /* background: #fff; */
-
-    /* display: -webkit-box; */
-    /* display: -ms-flexbox; */
-    /* display: -webkit-flex; */
-    /* display: flex; */
-    /* -webkit-box-pack: center; */
-    /* -ms-flex-pack: center; */
-    /* -webkit-justify-content: center; */
-    /* justify-content: center; */
-    /* -webkit-box-align: center; */
-    /* -ms-flex-align: center; */
-    /* -webkit-align-items: center; */
-    /* align-items: center; */
 }
 
 .swiper-container .swiper-slide img {
@@ -96,15 +80,108 @@ body {
 
 .swiper-container .search .iconfont {
     font-size: 20px;
-    color: red;
+    color: #767575;
     margin-left: 5px;
 }
 
 .swiper-container .search input {
     width: 280px;
-    background: pink;
     height: 30px;
-    border-right: 1px solid #000;
+    border-right: 1px solid #898989;
 }
+
+/* tab卡片 */
+.tab {
+    margin: 20px 0 10px;
+    background: #fff;
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #DEDFDF;
+    border-radius: 3px;
+    color: #646262;
+}
+
+.tab .tab_l {
+    display: flex;
+    align-items: center;
+}
+
+.tab .tab_l .hot {
+    display: flex;
+    border-right: 1px solid #DEDFDF;
+    padding-right: 20px;
+    height: 40px;
+}
+
+.tab .tab_l .hot li {
+    width: 50px;
+    height: 24px;
+    margin-top: 8px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.tab .tab_l .hot li.active {
+    background: #C60E11;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.tab .tab_l .type {
+    display: flex;
+}
+
+.tab .tab_l .type li {
+    width: 60px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.tab .tab_l .type li.active {
+    border-bottom: 3px solid #C60E11;
+}
+
+.tab .tab_l .type li .iconfont {
+    color: #000;
+}
+
+.tab .tab_r {
+    display: flex;
+    align-items: center;
+}
+
+.tab .tab_r li {
+    margin-left: 10px;
+}
+
+.tab .tab_r li:nth-child(1), .tab .tab_r li:nth-child(2) {
+    cursor: pointer;
+}
+
+.tab .tab_r li:nth-child(1) .iconfont, .tab .tab_r li:nth-child(2) .iconfont {
+    color: #9FA0A0;
+}
+
+.tab .tab_r li.active .iconfont {
+    color: #595757;
+}
+
+.tab .tab_r li:nth-child(3) {
+    color: #C60E11;
+}
+
+.tab .tab_r li:nth-child(3) .icon-shaixuan1 {
+    font-size: 12px;
+}
+
+
+
+
 
 

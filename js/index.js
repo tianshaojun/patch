@@ -1,3 +1,4 @@
+// banner轮播图
 var swiper = new Swiper('.swiper-container', {
       spaceBetween: 30,
       centeredSlides: true,
@@ -13,4 +14,5 @@ var swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    });
+});
+

@@ -17,7 +17,8 @@
 }
 
 :root {
-    --swiper-theme-color:#007aff}
+    --swiper-theme-color:#C60E11;
+}
 
 .swiper-container {
     margin-left: auto;
@@ -256,8 +257,8 @@
     height: 8px;
     display: inline-block;
     border-radius: 100%;
-    background: #000;
-    opacity: .2
+    background: #fff;
+    /* opacity: .2 */
 }
 
 button.swiper-pagination-bullet {
@@ -276,7 +277,10 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: var(--swiper-pagination-color,var(--swiper-theme-color))
+    background: var(--swiper-pagination-color,var(--swiper-theme-color));
+    width: 24px;
+    height: 8px;
+    border-radius: 4px;
 }
 
 .swiper-container-vertical>.swiper-pagination-bullets {
