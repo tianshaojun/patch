@@ -1,0 +1,142 @@
+body {
+    min-width: 1024px;
+    background: #F6F7FB;
+    width: calc(100% - 30px * 2);
+    margin:0 auto;
+}
+
+/* .page {
+    background: pink;
+} */
+
+/* 头部 */
+.head {
+    width: 100%;
+    /* height: 40px; */
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.head .logo {
+    width: 260px;
+    background: pink;
+    height: 90px;
+}
+
+.head h2 {
+    font-weight: normal;
+    font-size: 28px;
+    margin-right: 25px;
+}
+
+.head p {
+    color: #7E8993;
+    font-size: 24px;
+}
+
+.head .userInfo {
+    position: absolute;
+    right: 120px;
+    color: #7E8993;
+    cursor: pointer;
+}
+
+/* 指标卡 */
+.card {
+    width: 100%;
+    height: 130px;
+    background: red;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .card_l {
+    width: 10%;
+    background: #fff;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card_l .iconfont {
+    font-size: 30px;
+}
+
+.card .card_l span {
+    font-size: 14px;
+}
+
+.card .card_c {
+    width: 20%;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.card .card_c .title {
+    /* background: pink; */
+    padding-left: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.card .card_c .number {
+    /* background: pink; */
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.card .card_c .receive {
+    background: #C60E11;
+    padding: 3px 5px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 3px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.card .card_r {
+    width: 68%;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.card .card_r .title {
+    padding-left: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.card .card_r .list {
+    padding-left: 20px;
+
+}
+
+.card .card_r li {
+    /* width: 150px; */
+    width: 20%;
+    background:pink;
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+
+
+    
+
+
+    
+
