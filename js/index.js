@@ -59,3 +59,10 @@ $(".page .select ul li .dropDown li .d-btn").click(function(){
 })
 
 
+//横纵布局切换
+$('.page .tab .tab_r').on('click', '.row_col', function() {
+  $(this).addClass('active').siblings().removeClass('active');
+  var index =  $(this).index();
+  $(this).parents('.page').find('.waterfall').children('.layout').hide().eq(index).show();  
+})
+

@@ -204,6 +204,7 @@ body {
     height: 200px;
     background: #fff;
     border: 1px solid #DEDFDF;
+    margin-bottom: 20px;
 }
 
 .select ul {
@@ -289,7 +290,7 @@ body {
     border: 1px solid #DEDFDF;
     border-radius: 0;
     padding: 10px 0;
-    /* display: none; */
+    display: none;
 }
 
 .select ul li .dropDown li {
@@ -346,6 +347,23 @@ body {
 .select ul li .dropDown_col .dropDown_r {
     width: 48%;
     background: red;
+}
+
+/* 瀑布流布局 */
+.waterfall {
+    width: 100%;
+    background: pink;
+    border: 1px solid red;
+    height: 1000px;
+}
+
+.waterfall .layout {
+    display: none;
+    width: 100%;
+}
+
+.waterfall .layout.on {
+    display: block;
 }
 
 
