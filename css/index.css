@@ -187,6 +187,7 @@ body {
     height: 40px;
     line-height: 40px;
     color: #676666;
+    text-align: left;
 }
 
 .headline span {
@@ -201,7 +202,7 @@ body {
 /* 条件筛选 */
 .select {
     width: 100%;
-    height: 200px;
+    height: 140px;
     background: #fff;
     border: 1px solid #DEDFDF;
     margin-bottom: 20px;
@@ -273,6 +274,44 @@ body {
     background: #fff;
 }
 
+.select ul li div.all {
+    display: flex;
+    line-height: 30px;
+    width: 50px;
+    font-size: 12px;
+    position: absolute;
+    right:0;
+    bottom:0;
+    height: 30px;
+    color: #707070;
+    background: #fff;
+}
+
+.select ul li div.all input {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #333;
+}
+
+.select ul li.result {
+    /* background: #fff; */
+    /* background: pink; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    margin-top: 22px;
+    color: #707070;
+}
+
+.select ul li.result p {
+    border: 1px solid #ccc;
+    padding: 2px 3px;
+    border-radius: 3px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
 .select ul li div.download .iconfont {
     color: #000000;
 }
@@ -335,6 +374,8 @@ body {
 .select ul li .dropDown_col {
     display: flex;
     justify-content: space-around;
+    background: yellow;
+    border: none;
 }
 
 .select ul li .dropDown_col .dropDown_l {
@@ -342,19 +383,55 @@ body {
     background: pink;
     position:absolute;
     left: 0;
+    top: 0;
+    border: 1px solid #DFDFDF;
+}
+
+.select ul li .dropDown_col .dropDown_l li {
+    display: flex;
+    flex-direction: row;
 }
 
 .select ul li .dropDown_col .dropDown_r {
     width: 48%;
     background: red;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+/* 选中结果 */
+.selected {
+    width: 100%;
+    height: 64px;
+    margin-bottom: 20px;
+}
+
+.selected li {
+    background: #fff;
+    float: left;
+    margin-right: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.selected li span:nth-child(1) {
+    margin-right: 10px;
+}
+
+.selected li:last-child {
+   color: #C60E11;
+   background: none;
 }
 
 /* 瀑布流布局 */
 .waterfall {
     width: 100%;
-    background: pink;
-    border: 1px solid red;
-    height: 1000px;
+    /* border: 1px solid red; */
+    /* height: 1000px; */
+    /* background: red; */
+    /* padding: 0 10px; */
 }
 
 .waterfall .layout {
@@ -374,9 +451,6 @@ body {
     right:0;
     bottom: 0;
     background: rgba(0,0,0,.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     display: none;
 }
 
@@ -395,9 +469,15 @@ body {
 .shadow .panel {
     background: #FFF;
     height: 90%;
+    height: 600px;
     width: 800px;
     border-radius: 3px;
     padding: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -300px;
 }
 
 .shadow .panel .panel_t {

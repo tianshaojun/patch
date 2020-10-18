@@ -1,22 +1,48 @@
-body {
-    text-align: center;
-}
-
 .photo {
     position: relative;
+    cursor: pointer;
 }
 
-.title{
+.photo .photo_l_t {
     position: absolute;
-    bottom:20px;
-    left:0px;
-    text-align: center;
-    right:0px;
-    font-size:24px;
-    font-weight: bold;
-    color:#979797;
+    left: 20px;
+    top: 20px;
+    background: red;
 }
+
+.photo .photo_l_b {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #fff;
+}
+
+.photo .photo_r_t {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.photo .photo_r_b {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    /* background: red; */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+    height: 20px;
+}
+
 .photos {
     margin:auto;
-    font-size:0px;
+    /* font-size:40px; */
 }

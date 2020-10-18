@@ -1,5 +1,5 @@
 var gallery = $('.photos').gallerify({
-    margin:10,
+    margin:0,
     mode:'default',
     lastRow:'adjust'
 });	

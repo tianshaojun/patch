@@ -17,6 +17,12 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 
+//热门&最新切换
+$('.page .tab .tab_l .hot').on('click', 'li', function() {
+  $(this).addClass('active').siblings().removeClass('active');
+})
+
+
 //类型切换
 $('.page .tab .tab_l .type').on('click', 'li', function() {
   $(this).addClass('active').siblings().removeClass('active');
@@ -64,5 +70,19 @@ $('.page .tab .tab_r').on('click', '.row_col', function() {
   $(this).addClass('active').siblings().removeClass('active');
   var index =  $(this).index();
   $(this).parents('.page').find('.waterfall').children('.layout').hide().eq(index).show();  
+})
+
+
+//点击图片弹出蒙层
+$('.page .waterfall .layout').on('click', 'img', function() {
+  $('.page .shadow').css('display', 'block');
+  $('.page .close').css('display', 'block');
+})
+
+
+//关闭蒙层
+$('.page .close').on('click', function() {
+  $('.page .shadow').css('display', 'none');
+  $(this).css('display', 'none');
 })
 

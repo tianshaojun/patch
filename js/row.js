@@ -18,6 +18,25 @@ window.onload = function () {
                 var oImg = document.createElement('img');
                 oImg.src = 'images/' + imgArray.date[i].src;
                 oImgDiv.appendChild(oImg);
+
+                //动态添加元素
+                l1 = document.createElement('div');
+                l1.className = 'photo_l_t';
+                l1.innerHTML = '图片,GIF';
+                oImgDiv.appendChild(l1);
+                l2 = document.createElement('div');
+                l2.className = 'photo_l_b';
+                l2.innerHTML = '活动名称';
+                oImgDiv.appendChild(l2);
+                l3 = document.createElement('div');
+                l3.className = 'photo_r_t';
+                l3.innerHTML = `<span class="icon iconfont icon-xiazai-shi"></span>`;
+                oImgDiv.appendChild(l3);
+                l4 = document.createElement('div');
+                l4.className = 'photo_r_b';
+                l4.innerHTML = `<span class="icon iconfont icon-xiaoxi"></span>
+                <span>303</span>`;
+                oImgDiv.appendChild(l4);
             }
             setPosition('content', 'box');
         }
@@ -31,7 +50,7 @@ function setPosition(parents, content) {
     var oneWidth = aBox[0].offsetWidth;      //获取单个box的宽度
     var docWidth = document.documentElement.clientWidth || document.body.clientWidth; //获取窗口可视区域宽度
     var num = Math.floor(docWidth / oneWidth);
-    oContent.style.width = num * oneWidth + 'px';  //设置外部容器的宽度    
+    // oContent.style.width = num * oneWidth + 'px';  //设置外部容器的宽度    
     var result = [];
     for (var i = 0; i < aBox.length; i++) {
         if (i < num) {
