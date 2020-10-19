@@ -1,8 +1,8 @@
 body {
-    min-width: 1024px;
+    /* min-width: 1366px; */
     background: #F6F7FB;
     width: calc(100% - 30px * 2);
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 /* .page {
@@ -12,7 +12,7 @@ body {
 /* 头部 */
 .head {
     width: 100%;
-    /* height: 40px; */
+    height: 60px;
     background: #fff;
     display: flex;
     align-items: center;
@@ -20,9 +20,15 @@ body {
 }
 
 .head .logo {
-    width: 260px;
-    background: pink;
-    height: 90px;
+    width: 200px;
+    background: #fff;
+    height: 60px;
+    padding: 10px;
+}
+
+.head .logo img {
+    width: 100%;
+    height: 100%;
 }
 
 .head h2 {
@@ -160,11 +166,13 @@ body {
     margin-left: 10px;
 }
 
-.tab .tab_r li:nth-child(1), .tab .tab_r li:nth-child(2) {
+.tab .tab_r li:nth-child(1),
+.tab .tab_r li:nth-child(2) {
     cursor: pointer;
 }
 
-.tab .tab_r li:nth-child(1) .iconfont, .tab .tab_r li:nth-child(2) .iconfont {
+.tab .tab_r li:nth-child(1) .iconfont,
+.tab .tab_r li:nth-child(2) .iconfont {
     color: #9FA0A0;
 }
 
@@ -218,14 +226,14 @@ body {
 }
 
 .select ul li {
-   width: 13%;
-   float: left;
-   display: flex;
-   flex-direction: column;
-   /* background: pink; */
-   margin-right: 10px;
-   margin-bottom: 10px;
-   position: relative;
+    width: 13%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    /* background: pink; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .select ul li .name {
@@ -242,12 +250,12 @@ body {
     border-radius: 5px;
     align-items: center;
     padding: 0 5px;
-    cursor: pointer;   
+    cursor: pointer;
     /* line-height: 30px; */
 }
 
 .select ul li div.line {
-    border: 1px solid #C60E11; 
+    border: 1px solid #C60E11;
     border-radius: 5px;
 }
 
@@ -280,8 +288,8 @@ body {
     width: 50px;
     font-size: 12px;
     position: absolute;
-    right:0;
-    bottom:0;
+    right: 0;
+    bottom: 0;
     height: 30px;
     color: #707070;
     background: #fff;
@@ -337,14 +345,14 @@ body {
     /* background: pink; */
     height: 20px;
     line-height: 20px;
-    margin-bottom:0;
+    margin-bottom: 0;
     position: relative;
     cursor: pointer;
 }
 
 .select ul li .dropDown li label {
-    position:absolute;
-    left:10px;
+    position: absolute;
+    left: 10px;
     display: block;
     width: 80px;
     height: 20px;
@@ -355,9 +363,9 @@ body {
 }
 
 .select ul li .dropDown li input {
-    position:absolute;
-    right:10px;
-    top:4px;
+    position: absolute;
+    right: 10px;
+    top: 4px;
     width: 12px;
     height: 12px;
     display: block;
@@ -372,32 +380,85 @@ body {
 
 /*项目&人物*/
 .select ul li .dropDown_col {
-    display: flex;
-    justify-content: space-around;
-    background: yellow;
     border: none;
 }
 
 .select ul li .dropDown_col .dropDown_l {
     width: 48%;
-    background: pink;
-    position:absolute;
+    background: #fff;
+    position: absolute;
     left: 0;
     top: 0;
     border: 1px solid #DFDFDF;
+    padding: 10px 0;
 }
 
 .select ul li .dropDown_col .dropDown_l li {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.select ul li .dropDown_col .dropDown_l li.active {
+    background: #F4CFCF;
+}
+
+.select ul li .dropDown_col .dropDown_l li .iconfont {
+    color: #505050;
 }
 
 .select ul li .dropDown_col .dropDown_r {
     width: 48%;
-    background: red;
+    background: #fff;
     right: 0;
     top: 0;
     position: absolute;
+    border: 1px solid #DFDFDF;
+    padding: 10px 0;
+}
+
+.select ul li .dropDown_col .dropDown_r li label {
+    background: #fff;
+}
+
+/* 时间 */
+.select ul li .time .dropDown_l {
+    width: 50%;
+    border-right: none;
+}
+
+.select ul li .time .dropDown_r {
+    width: 50%;
+}
+
+/* 地点 */
+.select ul li .dropDown_col .dropDown_r_r {
+    width: 48%;
+    background: #fff;
+    left: 100%;
+    top: 0;
+    position: absolute;
+    border: 1px solid #DFDFDF;
+    padding: 10px 0;
+    margin-left: 10px;
+}
+
+.select ul li .place .dropDown_r li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.select ul li .place .dropDown_r li.active {
+    background: #F4CFCF;
+}
+
+.select ul li .place .dropDown_r_r li label {
+    width: 100%;
+}
+
+.select ul li .place .dropDown_r_r li.active label {
+    background: #fff;
 }
 
 /* 选中结果 */
@@ -421,26 +482,98 @@ body {
 }
 
 .selected li:last-child {
-   color: #C60E11;
-   background: none;
+    color: #C60E11;
+    background: none;
 }
 
 /* 瀑布流布局 */
 .waterfall {
     width: 100%;
-    /* border: 1px solid red; */
-    /* height: 1000px; */
-    /* background: red; */
-    /* padding: 0 10px; */
 }
 
 .waterfall .layout {
     display: none;
     width: 100%;
+    /* background: pink; */
+    /* border: 1px solid red; */
 }
 
 .waterfall .layout.on {
     display: block;
+}
+
+/* 音频 */
+.audio {
+    width: 100%;
+    height: 300px;
+    display: none;
+}
+
+.audio li {
+    height: 75px;
+    border-top: 1px solid #DCDDDD;
+    width: 100%;
+}
+
+.audio .audio_l {
+    float: left;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.audio .audio_l .iconfont {
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.audio li.active .audio_l .iconfont {
+    color: #C60E11;
+}
+
+.audio .audio_l .audio_l_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.audio .audio_l .audio_l_info .name {
+    font-size: 14px;
+}
+
+.audio .audio_c {
+    float: left;
+    width: 60%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio .audio_c li {
+    background: #EFEFEF;
+    margin-right: 10px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    border-radius: 4px;
+}
+
+.audio .audio_r {
+    float: left;
+    width: 20%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.audio .audio_r .iconfont {
+    font-size: 22px;
+    cursor: pointer;
 }
 
 /* 图片蒙层 */
@@ -448,22 +581,24 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    right:0;
+    right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
     display: none;
+    z-index: 10;
 }
 
 .close {
     position: fixed;
     top: 20px;
-    right:20px;
+    right: 20px;
     width: 20px;
     height: 20px;
     line-height: 20px;
     cursor: pointer;
     color: #fff;
     display: none;
+    z-index: 10;
 }
 
 .shadow .panel {
@@ -500,7 +635,7 @@ body {
 
 .shadow .panel .panel_t .panel_t_l .imgName {
     font-size: 12px;
-    color: red;
+    color: #C60E11;
 }
 
 .shadow .panel .panel_t .panel_t_r {
@@ -562,13 +697,14 @@ body {
 .shadow .panel .panel_b .panel_b_l li .time {
     font-size: 12px;
     color: red;
+    color: #9FA0A0;
 }
 
 .shadow .panel .panel_b .panel_b_r {
     width: 25%;
 }
 
-.shadow .panel .panel_b .panel_b_r h3{
+.shadow .panel .panel_b .panel_b_r h3 {
     text-align: left;
     height: 20px;
     line-height: 10px;
@@ -580,12 +716,3 @@ body {
     margin-bottom: 10px;
     border-radius: 4px;
 }
-
-
-
-
-
-
-
-
-

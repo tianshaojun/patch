@@ -7,7 +7,7 @@
     position: absolute;
     left: 20px;
     top: 20px;
-    background: red;
+    color: #DCDDDD;
 }
 
 .photo .photo_l_b {
@@ -43,6 +43,6 @@
 }
 
 .photos {
-    margin:auto;
-    /* font-size:40px; */
+    margin: auto;
+    /* font-size:38px; */
 }
