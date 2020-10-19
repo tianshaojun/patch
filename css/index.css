@@ -254,6 +254,12 @@ body {
     /* line-height: 30px; */
 }
 
+.select ul li div .item {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
 .select ul li div.line {
     border: 1px solid #C60E11;
     border-radius: 5px;
