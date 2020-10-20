@@ -12,7 +12,14 @@
   <link rel="stylesheet" href="./css/row.css">
   <link rel="stylesheet" href="./css/column.css">
   <link rel="stylesheet" href="./css/index.css">
-
+  <script src="./js/lib/jquery.js"></script>
+  <script src="./js/lib/swiper-bundle.min.js"></script>
+  <script src="./js/lib/dropdown.js"></script>
+  <script src="./js/row.js"></script>
+  <script src="./js/lib/jquery.min.js"></script>
+  <script src="./js/lib/jquery.xgallerify.min.js"></script>
+  <script src="./js/column.js"></script>
+  <script src="./js/index.js"></script>
 <body>
   <div class="page">
     <!-- 头部 -->
@@ -137,11 +144,11 @@
           </div>
           <ol class="dropDown dropDown_col time">
             <ol class="dropDown_l">
-              <li>
+              <li class="active">
                 <span>2020</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
-              <li class="active">
+              <li>
                 <span>2019</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
@@ -252,78 +259,66 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-           <ol class="dropDown dropDown_col place">
+           <ol class="dropDown dropDown_col place place_pic">
             <ol class="dropDown_l">
-              <li>
-                <span>活动名称</span>
-                <span class="icon iconfont icon-yousanjiao"></span>
-              </li>
               <li class="active">
-                <span>活动名称</span>
+                <span>河北省</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
               <li>
-                <span>活动名称</span>
+                <span>河南省</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
               <li>
-                <span>活动名称</span>
+                <span>山东省</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
             </ol>
             <ol class="dropDown_r">
-              <li>
-                <span>活动名称</span>
-                <span class="icon iconfont icon-yousanjiao"></span>
-              </li>
               <li class="active">
-                <span>活动名称</span>
+                <span>邯郸市</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
               <li>
-                <span>活动名称</span>
+                <span>邢台市</span>
+                <span class="icon iconfont icon-yousanjiao"></span>
+              </li>
+              <li>
+                <span>保定市</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
                <li>
-                <span>活动名称</span>
-                <span class="icon iconfont icon-yousanjiao"></span>
-              </li>
-               <li>
-                <span>活动名称</span>
+                <span>廊坊市</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
             </ol>
-              <ol class="dropDown_r_r">
+            <ol class="dropDown_r_r">
               <li>
                 <label>(全选)</label>
                 <input class="j-check g-check d-button" type="checkbox" />
               </li>
               <li class="active">
-                <label>活动名称</label>
+                <label>永年区</label>
                 <input class="d-button d-btn" type="checkbox" checked />
               </li>
               <li>
-                <label>活动名称</label>
+                <label>复兴区</label>
                 <input class="d-button d-btn" type="checkbox" />
               </li>
               <li>
-                <label>活动名称</label>
+                <label>邯山区</label>
                 <input class="d-button d-btn" type="checkbox" />
               </li>
               <li>
-                <label>活动名称</label>
+                <label>丛台区</label>
                 <input class="d-button d-btn" type="checkbox" />
               </li>
               <li>
-                <label>活动名称</label>
+                <label>峰峰矿区</label>
                 <input class="d-button d-btn" type="checkbox" />
               </li>
               <li>
-                <label>活动名称</label>
-                <input class="d-button d-btn" type="checkbox" />
-              </li>
-              <li>
-                <label>活动名称</label>
+                <label>肥乡区</label>
                 <input class="d-button d-btn" type="checkbox" />
               </li>
             </ol>
@@ -341,15 +336,15 @@
               <input class="j-check g-check d-button" type="checkbox" />
             </li>
             <li class="active">
-              <label>活动名称</label>
+              <label>类型1</label>
               <input class="d-button d-btn" type="checkbox" checked />
             </li>
             <li>
-              <label>活动名称</label>
+              <label>类型2</label>
               <input class="d-button d-btn" type="checkbox" />
             </li>
             <li>
-              <label>活动名称</label>
+              <label>类型3</label>
               <input class="d-button d-btn" type="checkbox" />
             </li>
           </ol>
@@ -360,18 +355,18 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown dropDown_col">
+          <ol class="dropDown dropDown_col project">
             <ol class="dropDown_l">
-              <li>
-                <span>活动名称</span>
-                <span class="icon iconfont icon-yousanjiao"></span>
-              </li>
               <li class="active">
-                <span>活动名称</span>
+                <span>项目一</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
               <li>
-                <span>活动名称</span>
+                <span>项目二</span>
+                <span class="icon iconfont icon-yousanjiao"></span>
+              </li>
+              <li>
+                <span>项目三</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
             </ol>
@@ -381,11 +376,15 @@
                 <input class="j-check g-check d-button" type="checkbox" />
               </li>
               <li class="active">
-                <label>活动名称</label>
+                <label>项目二级一</label>
                 <input class="d-button d-btn" type="checkbox" checked />
               </li>
               <li>
-                <label>活动名称</label>
+                <label>项目二级二</label>
+                <input class="d-button d-btn" type="checkbox" />
+              </li>
+              <li>
+                <label>项目二级三</label>
                 <input class="d-button d-btn" type="checkbox" />
               </li>
             </ol>
@@ -397,18 +396,18 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown dropDown_col">
+          <ol class="dropDown dropDown_col person">
             <ol class="dropDown_l">
-              <li>
-                <span>活动名称</span>
-                <span class="icon iconfont icon-yousanjiao"></span>
-              </li>
               <li class="active">
-                <span>活动名称</span>
+                <span>人物1</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
               <li>
-                <span>活动名称</span>
+                <span>人物2</span>
+                <span class="icon iconfont icon-yousanjiao"></span>
+              </li>
+              <li>
+                <span>人物3</span>
                 <span class="icon iconfont icon-yousanjiao"></span>
               </li>
             </ol>
@@ -418,11 +417,15 @@
                 <input class="j-check g-check d-button" type="checkbox" />
               </li>
               <li class="active">
-                <label>活动名称</label>
+                <label>人物11</label>
                 <input class="d-button d-btn" type="checkbox" checked />
               </li>
               <li>
-                <label>活动名称</label>
+                <label>人物22</label>
+                <input class="d-button d-btn" type="checkbox" />
+              </li>
+              <li>
+                <label>人物33</label>
                 <input class="d-button d-btn" type="checkbox" />
               </li>
             </ol>
@@ -434,21 +437,21 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown">
+          <ol class="dropDown property">
             <li>
               <label>(全选)</label>
               <input class="j-check g-check d-button" type="checkbox" />
             </li>
             <li class="active">
-              <label>活动名称</label>
+              <label>性质1</label>
               <input class="d-button d-btn" type="checkbox" checked />
             </li>
             <li>
-              <label>活动名称</label>
+              <label>性质2</label>
               <input class="d-button d-btn" type="checkbox" />
             </li>
             <li>
-              <label>活动名称</label>
+              <label>性质3</label>
               <input class="d-button d-btn" type="checkbox" />
             </li>
           </ol>
@@ -459,7 +462,7 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown">
+          <ol class="dropDown size">
             <li>
               <label>(全选)</label>
               <input class="j-check g-check d-button" type="checkbox" />
@@ -500,7 +503,7 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown">
+          <ol class="dropDown compositionPicture">
             <li>
               <label>(全选)</label>
               <input class="j-check g-check d-button" type="checkbox" />
@@ -529,7 +532,7 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown">
+          <ol class="dropDown fileFormat">
             <li>
               <label>(全选)</label>
               <input class="j-check g-check d-button" type="checkbox" />
@@ -585,7 +588,7 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown dropDown_col time">
+          <ol class="dropDown dropDown_col">
             <ol class="dropDown_l">
               <li>
                 <span>2020</span>
@@ -785,7 +788,7 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown type">
+          <ol class="dropDown">
             <li>
               <label>(全选)</label>
               <input class="j-check g-check d-button" type="checkbox" />
@@ -990,7 +993,7 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown dropDown_col time">
+          <ol class="dropDown dropDown_col">
             <ol class="dropDown_l">
               <li>
                 <span>2020</span>
@@ -1190,7 +1193,7 @@
             <span class="item"></span>
             <span class="icon iconfont icon-xiala"></span>
           </div>
-          <ol class="dropDown type">
+          <ol class="dropDown">
             <li>
               <label>(全选)</label>
               <input class="j-check g-check d-button" type="checkbox" />
@@ -1320,92 +1323,54 @@
     </div>
 
     <!-- 选中结果 -->
-    <ul class="selected">
-      <li>
+    <ul class="selected dynamic">
+      <li class="time">
         <span>活动名称</span>
         <span>x</span>
       </li>
-      <li>
+      <li class="time">
         <span>活动名称</span>
         <span>x</span>
       </li>
-      <li>
-        <span>活动名称</span>
+      <!-- <li class="time">
+        <span>2020-12月</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+      <!-- <li class="place_pic">
+        <span>河北省-邯郸市-永年区</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+      <!-- <li class="type">
+        <span>类型1</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+      <!-- <li class="project">
+        <span>项目</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+      <!-- <li class="person">
+        <span>人物</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+      <!-- <li class="property">
+        <span>性质1</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+      <!-- <li class="size">
+        <span>性质1</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+       <!-- <li class="compositionPicture">
+        <span>横图</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
+      </li> -->
+      <!-- <li class="fileFormat">
+        <span>JPG</span>
         <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>
-        <span>活动名称</span>
-        <span>x</span>
-      </li>
-      <li>清空筛选</li>
+      </li> -->
+
+
+      
     </ul>
 
     <!-- 瀑布流布局 -->
@@ -2037,13 +2002,5 @@
 
   </div>
 </body>
-<script src="./js/lib/jquery.js"></script>
-<script src="./js/lib/swiper-bundle.min.js"></script>
-<script src="./js/lib/dropdown.js"></script>
-<script src="./js/row.js"></script>
-<script src="./js/lib/jquery.min.js"></script>
-<script src="./js/lib/jquery.xgallerify.min.js"></script>
-<script src="./js/column.js"></script>
-<script src="./js/index.js"></script>
 </head>
 </html>

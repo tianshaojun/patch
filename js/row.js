@@ -41,6 +41,16 @@ window.onload = function () {
             setPosition('content', 'box');
         }
     }
+
+    
+    function resize() {
+        setPosition('content', 'box');
+    }
+
+    //页面缩放事件
+    $(window).resize(function () {
+        resize();
+    });
 }
 
 //元素排列
