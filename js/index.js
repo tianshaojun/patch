@@ -113,15 +113,13 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-      $('.dynamic li.type').hide();
-      $('.dynamic').append(`<li class="type"><span>${val}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
-      $('.dynamic li.type').hide();
-      $('.dynamic').append(`<li class="type"><span>${val}</span><span>x</span></li>`);  //动态添加卡片内容
+      $('.selectedResult').show();
+      $('.dynamic li.type').show();
+      $('.dynamic li.type span:nth-child(1)').html(val);  //卡片内容
 
     }
   })
@@ -142,7 +140,9 @@ $(document).ready(function () {
         res = res.substring(0, res.length - 1);
         $(this).parents('.page .select ul li').find('.outline .item').html(res); //下拉框上面显示内容
 
-        $('.dynamic').append(`<li class="type"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
+        $('.selectedResult').show();
+        $('.dynamic li.type').show();
+        $('.dynamic li.type span:nth-child(1)').html(res);  //卡片内容
       });
 
     } else {
@@ -151,7 +151,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.type').remove();  //移除卡片内容
+      $('.dynamic li.type').hide(); //隐藏卡片
     }
   })
 
@@ -177,18 +177,14 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-
-      $('.dynamic li.time').hide();
-      $('.dynamic').append(`<li class="time"><span>${value}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
       var value = time + '-' + val;  //值拼接
-      $('.dynamic li.time').hide();
-      $('.dynamic').append(`<li class="time"><span>${value}</span><span>x</span></li>`);  //动态添加卡片内容
-
+      $('.selectedResult').show();
+      $('.selectedResult li.time').show();
+      $($('.selectedResult li.time').find('span')[0]).html(value);  //卡片内容
     }
   })
 
@@ -200,21 +196,18 @@ $(document).ready(function () {
       $('.page .select ul li .time .dropDown_r li .d-button').parent('li').addClass('active');
 
       var str = '';
-      var str2 = '';
       $(".page .select ul li .time .dropDown_r li .d-btn").each(function (index) {
         var res = $(this).prev().text() + ',';
 
-        var val = time + '-' + res;
-        str += val;
+        str += res;
         var arr = str.split(',');
-        var res1 = arr.join('-');
-        res1 = res1.substring(0, res1.length - 1);
-        $('.dynamic').append(`<li class="time"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
-
-        str2 += res;
-        var arr2 = str2.split(',');
-        var res2 = arr2.join(',');
+        var res2 = arr.join(',');
         res2 = res2.substring(0, res2.length - 1);
+
+        $('.selectedResult').show();
+        $('.selectedResult li.time').show();
+        $($('.selectedResult li.time').find('span')[0]).html(time + '-' + res2);  //卡片内容
+
         $(this).parents('.page .select ul li').find('.outline .item').html(time + '-' + res2); //下拉框上面显示内容
 
       });
@@ -225,7 +218,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.time').remove();  //移除卡片内容
+      $('.selectedResult li.time').hide();  //隐藏卡片
     }
   })
 
@@ -267,8 +260,9 @@ $(document).ready(function () {
       $('.j-check').parent('li').removeClass('active');
 
       var value = province + city + '-' + val;  //值拼接
-      $('.dynamic li.place_pic').hide();
-      $('.dynamic').append(`<li class="place_pic"><span>${value}</span><span>x</span></li>`);  //动态添加卡片内容
+      $('.selectedResult').show();
+      $('.selectedResult li.place_pic').show();
+      $($('.selectedResult li.place_pic').find('span')[0]).html(value);  //卡片内容
 
     }
   })
@@ -281,21 +275,18 @@ $(document).ready(function () {
       $('.page .select ul li .place_pic .dropDown_r_r li .d-button').parent('li').addClass('active');
 
       var str = '';
-      var str2 = '';
       $(".page .select ul li .place_pic .dropDown_r_r li .d-btn").each(function (index) {
         var res = $(this).prev().text() + ',';
 
-        var val = province + city + '-' + res;
-        str += val;
+        str += res;
         var arr = str.split(',');
-        var res1 = arr.join('-');
-        res1 = res1.substring(0, res1.length - 1);
-        $('.dynamic').append(`<li class="place_pic"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
-
-        str2 += res;
-        var arr2 = str2.split(',');
-        var res2 = arr2.join(',');
+        var res2 = arr.join(',');
         res2 = res2.substring(0, res2.length - 1);
+
+        $('.selectedResult').show();
+        $('.selectedResult li.place_pic').show();
+        $($('.selectedResult li.place_pic').find('span')[0]).html(province + city + '-' + res2);  //卡片内容
+
         $(this).parents('.page .select ul li').find('.outline .item').html(province + city + '-' + res2); //下拉框上面显示内容
 
       });
@@ -306,7 +297,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.time').remove();  //移除卡片内容
+      $('.dynamic li.place_pic').hide();  //隐藏卡片
     }
   })
 
@@ -332,17 +323,14 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-
-      $('.dynamic li.project').hide();
-      $('.dynamic').append(`<li class="project"><span>${value}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
       var value = project + '-' + val;  //值拼接
-      $('.dynamic li.project').hide();
-      $('.dynamic').append(`<li class="project"><span>${value}</span><span>x</span></li>`);  //动态添加卡片内容
+      $('.selectedResult').show();
+      $('.selectedResult li.project').show();
+      $($('.selectedResult li.project').find('span')[0]).html(value);  //卡片内容
 
     }
   })
@@ -355,21 +343,18 @@ $(document).ready(function () {
       $('.page .select ul li .project .dropDown_r li .d-button').parent('li').addClass('active');
 
       var str = '';
-      var str2 = '';
       $(".page .select ul li .project .dropDown_r li .d-btn").each(function (index) {
         var res = $(this).prev().text() + ',';
 
-        var val = time + '-' + res;
-        str += val;
+        str += res;
         var arr = str.split(',');
-        var res1 = arr.join('-');
-        res1 = res1.substring(0, res1.length - 1);
-        $('.dynamic').append(`<li class="project"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
-
-        str2 += res;
-        var arr2 = str2.split(',');
-        var res2 = arr2.join(',');
+        var res2 = arr.join(',');
         res2 = res2.substring(0, res2.length - 1);
+
+        $('.selectedResult').show();
+        $('.selectedResult li.project').show();
+        $($('.selectedResult li.project').find('span')[0]).html(project + '-' + res2);  //卡片内容
+
         $(this).parents('.page .select ul li').find('.outline .item').html(project + '-' + res2); //下拉框上面显示内容
 
       });
@@ -380,7 +365,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.project').remove();  //移除卡片内容
+      $('.selectedResult li.project').hide();  //隐藏卡片
     }
   })
 
@@ -406,17 +391,14 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-
-      $('.dynamic li.person').hide();
-      $('.dynamic').append(`<li class="person"><span>${value}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
       var value = person + '-' + val;  //值拼接
-      $('.dynamic li.person').hide();
-      $('.dynamic').append(`<li class="person"><span>${value}</span><span>x</span></li>`);  //动态添加卡片内容
+      $('.selectedResult').show();
+      $('.selectedResult li.person').show();
+      $($('.selectedResult li.person').find('span')[0]).html(value);  //卡片内容
 
     }
   })
@@ -429,21 +411,18 @@ $(document).ready(function () {
       $('.page .select ul li .person .dropDown_r li .d-button').parent('li').addClass('active');
 
       var str = '';
-      var str2 = '';
       $(".page .select ul li .person .dropDown_r li .d-btn").each(function (index) {
         var res = $(this).prev().text() + ',';
 
-        var val = person + '-' + res;
-        str += val;
+        str += res;
         var arr = str.split(',');
-        var res1 = arr.join('-');
-        res1 = res1.substring(0, res1.length - 1);
-        $('.dynamic').append(`<li class="person"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
-
-        str2 += res;
-        var arr2 = str2.split(',');
-        var res2 = arr2.join(',');
+        var res2 = arr.join(',');
         res2 = res2.substring(0, res2.length - 1);
+
+        $('.selectedResult').show();
+        $('.selectedResult li.person').show();
+        $($('.selectedResult li.person').find('span')[0]).html(person + '-' + res2);  //卡片内容
+
         $(this).parents('.page .select ul li').find('.outline .item').html(person + '-' + res2); //下拉框上面显示内容
 
       });
@@ -454,7 +433,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.person').remove();  //移除卡片内容
+      $('.selectedResult li.person').hide();  //隐藏卡片
     }
   })
 
@@ -473,15 +452,13 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-      $('.dynamic li.property').hide();
-      $('.dynamic').append(`<li class="property"><span>${val}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
-      $('.dynamic li.property').hide();
-      $('.dynamic').append(`<li class="property"><span>${val}</span><span>x</span></li>`);  //动态添加卡片内容
+      $('.selectedResult').show();
+      $('.dynamic li.property').show();
+      $('.dynamic li.property span:nth-child(1)').html(val);  //卡片内容
 
     }
   })
@@ -503,7 +480,10 @@ $(document).ready(function () {
         res = res.substring(0, res.length - 1);
         $(this).parents('.page .select ul li').find('.outline .item').html(res); //下拉框上面显示内容
 
-        $('.dynamic').append(`<li class="property"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
+        $('.selectedResult').show();
+        $('.dynamic li.property').show();
+        $('.dynamic li.property span:nth-child(1)').html(res);  //卡片内容
+
       });
 
     } else {
@@ -512,7 +492,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.property').remove();  //移除卡片内容
+      $('.dynamic li.property').hide();  //隐藏卡片
     }
   })
 
@@ -531,15 +511,13 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-      $('.dynamic li.size').hide();
-      $('.dynamic').append(`<li class="size"><span>${val}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
-      $('.dynamic li.size').hide();
-      $('.dynamic').append(`<li class="size"><span>${val}</span><span>x</span></li>`);  //动态添加卡片内容
+      $('.selectedResult').show();
+      $('.dynamic li.size').show();
+      $('.dynamic li.size span:nth-child(1)').html(val);  //卡片内容
 
     }
   })
@@ -561,7 +539,8 @@ $(document).ready(function () {
         res = res.substring(0, res.length - 1);
         $(this).parents('.page .select ul li').find('.outline .item').html(res); //下拉框上面显示内容
 
-        $('.dynamic').append(`<li class="size"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
+        $('.dynamic li.size').show();
+        $('.dynamic li.size span:nth-child(1)').html(res);  //卡片内容
       });
 
     } else {
@@ -570,7 +549,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.size').remove();  //移除卡片内容
+      $('.dynamic li.size').hide();  //隐藏卡片
     }
   })
 
@@ -589,16 +568,13 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-      $('.dynamic li.compositionPicture').hide();
-      $('.dynamic').append(`<li class="compositionPicture"><span>${val}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
-      $('.dynamic li.compositionPicture').hide();
-      $('.dynamic').append(`<li class="compositionPicture"><span>${val}</span><span>x</span></li>`);  //动态添加卡片内容
-
+      $('.selectedResult').show();
+      $('.selectedResult li.compositionPicture').show();
+      $($('.selectedResult li.compositionPicture').find('span')[0]).html(val);  //卡片内容
     }
   })
 
@@ -619,7 +595,9 @@ $(document).ready(function () {
         res = res.substring(0, res.length - 1);
         $(this).parents('.page .select ul li').find('.outline .item').html(res); //下拉框上面显示内容
 
-        $('.dynamic').append(`<li class="compositionPicture"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
+        $('.selectedResult').show();
+        $('.selectedResult li.compositionPicture').show();
+        $($('.selectedResult li.compositionPicture').find('span')[0]).html(res);  //卡片内容
       });
 
     } else {
@@ -628,7 +606,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.compositionPicture').remove();  //移除卡片内容
+      $('.selectedResult li.compositionPicture').hide();  //隐藏卡片
     }
   })
 
@@ -647,16 +625,13 @@ $(document).ready(function () {
       $(".page .select ul li .dropDown li .g-check").prop("checked", true);
       $('.d-button').parent('li').addClass('active');
 
-      $('.dynamic li.fileFormat').hide();
-      $('.dynamic').append(`<li class="fileFormat"><span>${val}</span><span>x</span></li>`);  //动态添加元素
-
     } else {
       $(".page .select ul li .dropDown li .g-check").prop("checked", false);
       $('.j-check').parent('li').removeClass('active');
 
-      $('.dynamic li.fileFormat').hide();
-      $('.dynamic').append(`<li class="fileFormat"><span>${val}</span><span>x</span></li>`);  //动态添加卡片内容
-
+      $('.selectedResult').show();
+      $('.selectedResult li.fileFormat').show();
+      $($('.selectedResult li.fileFormat').find('span')[0]).html(val);  //卡片内容
     }
   })
 
@@ -677,7 +652,9 @@ $(document).ready(function () {
         res = res.substring(0, res.length - 1);
         $(this).parents('.page .select ul li').find('.outline .item').html(res); //下拉框上面显示内容
 
-        $('.dynamic').append(`<li class="fileFormat"><span>${arr[index]}</span><span>x</span></li>`);  //动态添加卡片内容
+        $('.selectedResult').show();
+        $('.selectedResult li.fileFormat').show();
+        $($('.selectedResult li.fileFormat').find('span')[0]).html(res);  //卡片内容
       });
 
     } else {
@@ -686,7 +663,7 @@ $(document).ready(function () {
 
       $(this).parents('.page .select ul li').find('.outline .item').html('');  //下拉框上面显示内容
 
-      $('.dynamic li.fileFormat').remove();  //移除卡片内容
+      $('.selectedResult li.fileFormat').hide();  //隐藏卡片
     }
   })
 
@@ -694,11 +671,21 @@ $(document).ready(function () {
   //点击x号删除
   $('.page .dynamic').delegate('li span:nth-child(2)', 'click', function () {
     $(this).parents('.page .dynamic li').remove();
+    // console.log($('.page .dynamic li').length);
+    // var banqifragment = $('.page .dynamic');
+    // console.log(banqifragment.innerHTML);
   })
 
 
   //横纵布局切换
   $('.page .tab .tab_r').on('click', '.row_col', function () {
+    var mark = $(this).attr('data_id');
+    if (mark == 'column') {
+      // console.log('纵向布局');
+    }
+    if (mark == 'row') {
+      // console.log('横向布局');
+    }
     $(this).addClass('active').siblings().removeClass('active');
     var index = $(this).index();
     $(this).parents('.page').find('.waterfall').children('.layout').hide().eq(index).show();

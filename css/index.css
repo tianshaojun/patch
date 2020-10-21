@@ -191,7 +191,6 @@ body {
 /* 标题 */
 .headline {
     width: 100%;
-    /* background: pink; */
     height: 40px;
     line-height: 40px;
     color: #676666;
@@ -230,7 +229,6 @@ body {
     float: left;
     display: flex;
     flex-direction: column;
-    /* background: pink; */
     margin-right: 10px;
     margin-bottom: 10px;
     position: relative;
@@ -251,12 +249,11 @@ body {
     align-items: center;
     padding: 0 5px;
     cursor: pointer;
-    /* line-height: 30px; */
 }
 
 .select ul li div .item {
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
@@ -308,8 +305,6 @@ body {
 }
 
 .select ul li.result {
-    /* background: #fff; */
-    /* background: pink; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -348,7 +343,6 @@ body {
 
 .select ul li .dropDown li {
     width: 100%;
-    /* background: pink; */
     height: 20px;
     line-height: 20px;
     margin-bottom: 0;
@@ -365,7 +359,6 @@ body {
     line-height: 20px;
     text-align: left;
     cursor: pointer;
-    /* background: red; */
 }
 
 .select ul li .dropDown li input {
@@ -460,7 +453,7 @@ body {
 }
 
 .select ul li .place .dropDown_r_r li label {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .select ul li .place .dropDown_r_r li.active label {
@@ -468,27 +461,73 @@ body {
 }
 
 /* 选中结果 */
-.selected {
+.selectedResult {
     width: 100%;
     min-height: 64px;
     margin-bottom: 20px;
-    /* background: pink; */
+    display: none;
 }
 
-.selected li {
+.selectedResult li {
     background: #fff;
     float: left;
     margin-right: 20px;
     padding: 5px;
     margin-bottom: 10px;
     cursor: pointer;
+    height: 30px;
 }
 
-.selected li span:nth-child(1) {
+/* 时间 */
+.selectedResult li.time {
+    display: none;
+}
+
+/* 地点 */
+.selectedResult li.place_pic {
+    display: none;
+}
+
+/* 类型 */
+.selectedResult li.type {
+    display: none;
+}
+
+/* 项目 */
+.selectedResult li.project {
+    display: none;
+}
+
+/* 人物 */
+.selectedResult li.person {
+    display: none;
+}
+
+/* 性质 */
+.selectedResult li.property {
+    display: none;
+}
+
+/* 文件大小 */
+.selectedResult li.size {
+    display: none;
+}
+
+/* 构图 */
+.selectedResult li.compositionPicture {
+    display: none;
+}
+
+/* 文件格式 */
+.selectedResult li.fileFormat {
+    display: none;
+}
+
+.selectedResult li span:nth-child(1) {
     margin-right: 10px;
 }
 
-/* .selected li:last-child {
+/* .selectedResult li:last-child {
     color: #C60E11;
     background: none;
 } */
@@ -501,8 +540,6 @@ body {
 .waterfall .layout {
     display: none;
     width: 100%;
-    /* background: pink; */
-    /* border: 1px solid red; */
 }
 
 .waterfall .layout.on {

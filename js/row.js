@@ -5,42 +5,42 @@ window.onload = function () {
     var imgArray = { 'date': [{ 'src': '05.jpg' }, { 'src': '06.jpg' }, { 'src': '07.jpg' }, { 'src': '08.jpg' }] }
 
     //滚动到页面底部（最后一张图片的顶部）时开始加载json内容
-    window.onscroll = function () {
-        if (getFlag()) { //判断是否滚动到最后一张
-            var oContent = document.getElementById('content'); //获取外部容器    
-            for (var i = 0; i < imgArray.date.length; i++) {
-                var oDiv = document.createElement('div');
-                oDiv.className = 'box';
-                oContent.appendChild(oDiv);
-                var oImgDiv = document.createElement('div');
-                oImgDiv.className = 'imgBox';
-                oDiv.appendChild(oImgDiv);
-                var oImg = document.createElement('img');
-                oImg.src = 'images/' + imgArray.date[i].src;
-                oImgDiv.appendChild(oImg);
+    // window.onscroll = function () {
+    //     if (getFlag()) { //判断是否滚动到最后一张
+    //         var oContent = document.getElementById('content'); //获取外部容器    
+    //         for (var i = 0; i < imgArray.date.length; i++) {
+    //             var oDiv = document.createElement('div');
+    //             oDiv.className = 'box';
+    //             oContent.appendChild(oDiv);
+    //             var oImgDiv = document.createElement('div');
+    //             oImgDiv.className = 'imgBox';
+    //             oDiv.appendChild(oImgDiv);
+    //             var oImg = document.createElement('img');
+    //             oImg.src = 'images/' + imgArray.date[i].src;
+    //             oImgDiv.appendChild(oImg);
 
-                //动态添加元素
-                l1 = document.createElement('div');
-                l1.className = 'photo_l_t';
-                l1.innerHTML = '图片,GIF';
-                oImgDiv.appendChild(l1);
-                l2 = document.createElement('div');
-                l2.className = 'photo_l_b';
-                l2.innerHTML = '活动名称';
-                oImgDiv.appendChild(l2);
-                l3 = document.createElement('div');
-                l3.className = 'photo_r_t';
-                l3.innerHTML = `<span class="icon iconfont icon-xiazai-shi"></span>`;
-                oImgDiv.appendChild(l3);
-                l4 = document.createElement('div');
-                l4.className = 'photo_r_b';
-                l4.innerHTML = `<span class="icon iconfont icon-xiaoxi"></span>
-                <span>303</span>`;
-                oImgDiv.appendChild(l4);
-            }
-            setPosition('content', 'box');
-        }
-    }
+    //             //动态添加元素
+    //             l1 = document.createElement('div');
+    //             l1.className = 'photo_l_t';
+    //             l1.innerHTML = '图片,GIF';
+    //             oImgDiv.appendChild(l1);
+    //             l2 = document.createElement('div');
+    //             l2.className = 'photo_l_b';
+    //             l2.innerHTML = '活动名称';
+    //             oImgDiv.appendChild(l2);
+    //             l3 = document.createElement('div');
+    //             l3.className = 'photo_r_t';
+    //             l3.innerHTML = `<span class="icon iconfont icon-xiazai-shi"></span>`;
+    //             oImgDiv.appendChild(l3);
+    //             l4 = document.createElement('div');
+    //             l4.className = 'photo_r_b';
+    //             l4.innerHTML = `<span class="icon iconfont icon-xiaoxi"></span>
+    //             <span>303</span>`;
+    //             oImgDiv.appendChild(l4);
+    //         }
+    //         setPosition('content', 'box');
+    //     }
+    // }
 
     
     function resize() {
