@@ -459,14 +459,6 @@ $(document).ready(function () {
   })
 
 
-
-
-
-
-
-
-
-
   //性质单选(图片)
   $(".page .select ul li .property li .d-btn").click(function () {
     var val = $(this).prev().html(); //内容
