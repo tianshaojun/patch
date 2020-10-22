@@ -670,26 +670,60 @@ $(document).ready(function () {
 
   //点击x号删除
   $('.page .dynamic').delegate('li span:nth-child(2)', 'click', function () {
-    $(this).parents('.page .dynamic li').remove();
-    // console.log($('.page .dynamic li').length);
-    // var banqifragment = $('.page .dynamic');
-    // console.log(banqifragment.innerHTML);
+    $(this).parents('.page .dynamic li').hide();
+    //页面显示标签的个数
+    var size = $('.page .dynamic li:visible').size();
+    if (size == '0') {
+      $('.page .dynamic').hide();
+    }
   })
+
+
 
 
   //横纵布局切换
   $('.page .tab .tab_r').on('click', '.row_col', function () {
-    var mark = $(this).attr('data_id');
-    if (mark == 'column') {
-      // console.log('纵向布局');
-    }
-    if (mark == 'row') {
-      // console.log('横向布局');
-    }
     $(this).addClass('active').siblings().removeClass('active');
     var index = $(this).index();
-    $(this).parents('.page').find('.waterfall').children('.layout').hide().eq(index).show();
+    // $(this).parents('.page').find('.waterfall').children('.layout').hide().eq(index).show();
+
+
+    var mark = $(this).attr('data_id');
+    console.log(mark)
+    if (mark == '1') {
+      //解决页面切换布错乱
+      // setTimeout(function () {
+      //   return compatibleEventCreate();
+      // }, 0);
+      $('.page .waterfall .row').show();
+      $('.page .waterfall .column').hide();
+
+    }
+    if (mark == '2') {
+      // $('.page .photos').css('fontSize', '38px');
+      // //解决页面切换布错乱
+      setTimeout(function () {
+        return compatibleEventCreate();
+      }, 0);
+
+      $('.page .waterfall .row').hide();
+      $('.page .waterfall .column').show();
+    }
   })
+
+  //页面加载后resize页面布局
+  function compatibleEventCreate() {
+    var element, ev, event;
+    if (document.createEvent) {
+      ev = document.createEvent('Event');
+      ev.initEvent('resize', true, true);
+      return window.dispatchEvent(ev);
+    } else {
+      element = document.documentElement;
+      event = document.createEventObject();
+      return element.fireEvent('onresize', event);
+    }
+  }
 
 
   //点击图片弹出蒙层
@@ -704,6 +738,25 @@ $(document).ready(function () {
     $('.page .shadow').css('display', 'none');
     $(this).css('display', 'none');
   })
+
+  
+  //点击阴影关闭
+  $('.page .shadow').on('click', function () {
+    $(this).hide();
+    $('.page .close').hide();
+  })
+
+  $('.page .shadow .panel').on('click', function (e) {
+    e.stopPropagation();
+  })
+
+
+
+
+
+
+
+
 
 
 })

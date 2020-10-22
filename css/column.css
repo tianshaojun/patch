@@ -33,7 +33,6 @@
     position: absolute;
     right: 20px;
     bottom: 20px;
-    /* background: red; */
     color: #fff;
     display: flex;
     align-items: center;
@@ -46,3 +45,6 @@
     margin: auto;
     /* font-size:38px; */
 }
+
+
+

@@ -1,5 +1,4 @@
 body {
-    /* min-width: 1366px; */
     background: #F6F7FB;
     width: calc(100% - 30px * 2);
     margin: 0 auto;
@@ -534,6 +533,8 @@ body {
 /* 瀑布流布局 */
 .waterfall {
     width: 100%;
+    /* background: pink;
+    border: 1px solid red; */
 }
 
 .waterfall .layout {
@@ -642,6 +643,7 @@ body {
     color: #fff;
     display: none;
     z-index: 10;
+    text-align: center;
 }
 
 .shadow .panel {
