@@ -687,27 +687,25 @@ $(document).ready(function () {
     var index = $(this).index();
     // $(this).parents('.page').find('.waterfall').children('.layout').hide().eq(index).show();
 
-
     var mark = $(this).attr('data_id');
-    console.log(mark)
     if (mark == '1') {
       //解决页面切换布错乱
-      // setTimeout(function () {
-      //   return compatibleEventCreate();
-      // }, 0);
-      $('.page .waterfall .row').show();
-      $('.page .waterfall .column').hide();
-
-    }
-    if (mark == '2') {
-      // $('.page .photos').css('fontSize', '38px');
-      // //解决页面切换布错乱
       setTimeout(function () {
         return compatibleEventCreate();
       }, 0);
 
       $('.page .waterfall .row').hide();
       $('.page .waterfall .column').show();
+
+    }
+    if (mark == '2') {
+      // //解决页面切换布错乱
+      // setTimeout(function () {
+      //   return compatibleEventCreate();
+      // }, 0);
+
+      $('.page .waterfall .row').show();
+      $('.page .waterfall .column').hide();
     }
   })
 
